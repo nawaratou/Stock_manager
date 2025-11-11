@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #08325f, #0d4b89);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.card{
+    width: 900px;
+    display: flex;
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+/* Partie gauche */
+.left{
+    width: 50%;
+    padding: 50px;
+}
+
+.left h2{
+    color: #08325f;
+    font-size: 24px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.left input{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.souvenir{
+    display: flex;
+    align-items: center;
+    margin-left: -10rem;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+ .moi{
+    position: relative;
+    max-width: 700px;
+    width: 50%;
+    color: #666;
+     left: -8rem;
+     top: -0.5rem;
+ }
+button{
+    width: 100%;
+    padding: 12px;
+    background: #0d4b89;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    
+}
+
+button:hover{
+    background: #08325f;
+}
+
+.links{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.links a{
+    color: #0d4b89;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Partie droite */
+.right{
+    width: 50%;
+    background-color: #08325f;
+    padding: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+.logo{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: white;
+    color: #08325f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    margin: 0 auto 20px;
+    font-weight: bold;
+}
+
+.right h2{
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.right p{
+    font-size: 15px;
+    line-height: 1.5;
+}

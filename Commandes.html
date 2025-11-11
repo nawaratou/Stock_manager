@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commandes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+   <link rel="stylesheet" href="Commandes.css">
+</head>
+<body>
+    <input type="checkbox" id="sidebar-toggle">
+    <label for="sidebar-toggle" class="sidebar-overlay"></label>
+    
+    <div class="container">
+        <div class="sidebar">
+            <label for="sidebar-toggle" class="close-sidebar">
+                <i class="fa-solid fa-times"></i>
+            </label>
+            
+            <h2><i class="fa-solid fa-chart-line"></i> Dashboard</h2>
+            <ul class="menu">
+                <li><a href="dashboard.html" class="menu-link"><i class="fa-solid fa-palette"></i> Tableau de Bord</a></li>
+                <li><a href="Analytics.html" class="menu-link"><i class="fa-solid fa-chart-column"></i> Analytics</a></li>
+                <li class="active"><a href="commandes.html" class="menu-link"><i class="fa-solid fa-cart-shopping"></i> Commandes</a></li>
+                <li><a href="parametres.html" class="menu-link"><i class="fa-solid fa-gear"></i> Paramètres</a></li>
+                <li><a href="rapports.html" class="menu-link"><i class="fa-solid fa-file-lines"></i> Rapports</a></li>
+                <li><a href="notifications.html" class="menu-link"><i class="fa-solid fa-bell"></i> Notifications</a></li>
+            </ul>
+            <div class="bottom-section">
+                <div class="user-box">
+                    <i class="fa-solid fa-circle-user user-icon"></i>
+                    <div>
+                        <strong>Administrateur</strong>
+                        <span>Gestionnaire</span>
+                    </div>
+                </div>
+                <a href="#profil-modal"><button class="profile-btn"><i class="fa-solid fa-user"></i> Mon Profil</button></a>
+                <a href="index.html"><button class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</button></a>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <nav class="topbar">
+                <label for="sidebar-toggle" class="menu-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <h5>Gestion de Stock - Produits Électroniques</h5>
+                 <div class="cloch">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="trois">3</span>
+                </div>
+                <div class="topbar_left">
+                    <span><i class="fa-solid fa-circle-user user-icon"></i></span>
+                    <strong class="admi">Administrateur</strong>
+                </div>
+            </nav>
+            
+            <section class="content">
+                <div class="titre">
+                     <i class="fa-solid fa-cart-shopping"></i>
+                <h2>Gestion des Commandes</h2>
+            </div>
+               
+                <p>Suivi et gestion complète des commandes clients</p>
+                <div class="Gestion"> 
+                    <div class="Produits">
+                       <i class="fa-solid fa-clock"></i>
+                        <div class="Produits-content">
+                            <h2>23</h2>
+                            <p>En attente</p>
+                        </div>
+                    </div>
+                    <div class="Produits">
+                        <i class="fa-solid fa-gears"></i>
+                        <div class="Produits-content">
+                            <h2>45</h2>
+                            <p>En cours</p>
+                        </div>
+                    </div>
+                    <div class="Produits">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <div class="Produits-content">
+                            <h2>67</h2>
+                            <p>Expédiées</p>
+                        </div>
+                    </div>
+                    <div class="Produits">
+                        <i class="fa-solid fa-check-circle"></i>
+                        <div class="Produits-content">
+                            <h2>234</h2>
+                            <p>Livrées</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="statut">
+                <div class="stat">
+                    <p>Statut:</p>
+                    <p>Période:</p>
+                </div>
+                <div class="put">
+                     <select name="statut" required> 
+                         <option value="">Tous les statuts</option>
+                         <option value="">En attente</option>
+                         <option value="">En cours</option>
+                         <option value="">Expédiée</option>
+                         <option value="">Livrées</option>
+                     </select>
+                     <select name="periode" required>
+                         <option value="">Aujourd'hui</option>
+                         <option value="">Cette semaine</option>
+                         <option value="">Ce mois</option>
+                     </select>
+                     <div class="search-container">
+                         <input type="text" placeholder="Rechercher une commande" class="search-input">
+                         <button class="glass"><i class="fa-solid fa-magnifying-glass"></i></button>
+                     </div>
+                </div>
+            </section>
+            
+            <!-- Commande 1 -->
+            <div class="bloc1">
+                <div class="header">
+                    <div class="commande">
+                        <h2>Commande #CMD-2024-001</h2>
+                        <p>Client : <span>Jean Dupont</span></p>
+                        <p>Date : <span>15 Jan 2024</span></p>
+                    </div>
+                    <div class="price">
+                        <span class="status pending">En attente</span>
+                        <h3 class="price">€1,199.00</h3>
+                    </div>
+                </div>
+                <div class="bande">
+                    <div class="bande_info">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <div>
+                            <strong>iPhone 15 Pro</strong> 
+                            <span>128GB - Bleu</span>
+                        </div>
+                    </div>
+                    <div class="qty">x1</div>
+                    <div class="item-price">€1,199.00</div>
+                </div>
+                <div class="actions">
+                    <a href="#modal1" class="bouton">
+                        <i class="fa-solid fa-eye"></i> Voir détails
+                    </a>
+                    <a href="#modifier1" class="btn">
+                        <i class="fa-solid fa-pen"></i> Modifier
+                    </a>
+                    <button class="btn process"><i class="fa-solid fa-check"></i> Traiter</button>
+                </div>
+            </div>
+
+            <!-- Commande 2 -->
+            <div class="bloc1">
+                <div class="header">
+                    <div class="commande">
+                        <h2>Commande #CMD-2024-002</h2>
+                        <p>Client : <span>Marie Martin</span></p>
+                        <p>Date : <span>14 Jan 2024</span></p>
+                    </div>
+                    <div class="price">
+                        <span class="status pending">En attente</span>
+                        <h3 class="price">€2,899.00</h3>
+                    </div>
+                </div>
+                <div class="bande">
+                    <div class="bande_info">
+                        <i class="fa-solid fa-laptop"></i>
+                        <div>
+                            <strong>MacBook Pro 16</strong> 
+                            <span>M3 Pro - 512GB</span>
+                        </div>
+                    </div>
+                    <div class="qty">x1</div>
+                    <div class="item-price">€2,899.00</div>
+                </div>
+                <div class="actions">
+                    <a href="#modal2" class="bouton">
+                        <i class="fa-solid fa-eye"></i> Voir détails
+                    </a>
+                    <a href="#modifier2" class="btn">
+                        <i class="fa-solid fa-pen"></i> Modifier
+                    </a>
+                    <button class="btn puce"><i class="fa-solid fa-truck"></i> Expédier</button>
+                </div>
+            </div>
+
+            <!-- Commande 3 -->
+            <div class="bloc1">
+                <div class="header">
+                    <div class="commande">
+                        <h2>Commande #CMD-2024-003</h2>
+                        <p>Client : <span>Pierre Durand</span></p>
+                        <p>Date : <span>13 Jan 2024</span></p>
+                    </div>
+                    <div class="price">
+                        <span class="status pending">En attente</span>
+                        <h3 class="price">€558.00</h3>
+                    </div>
+                </div>
+                <div class="bande">
+                    <div class="bande_info">
+                        <i class="fa-solid fa-headphones"></i>
+                        <div>
+                            <strong>AirPods Pro 2</strong> 
+                            <span>USB-C</span>
+                        </div>
+                    </div>
+                    <div class="qty">x2</div>
+                    <div class="item-price">€558.00</div>
+                </div>
+                <div class="actions">
+                    <a href="#modal3" class="bouton">
+                        <i class="fa-solid fa-eye"></i> Voir détails
+                    </a>
+                    <a href="#modifier3" class="btn">
+                        <i class="fa-solid fa-pen"></i> Modifier
+                    </a>
+                    <button class="btn puce"><i class="fa-solid fa-location-dot"></i> Suivre</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+   <!-- Modal Voir détails pour la commande 1 -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <!-- En-tête du modal -->
+        <div class="modal-header">
+            <h2><i class="fa-solid fa-eye"></i> Détails de la Commande</h2>
+            <a href="#" class="close-btn">&times;</a>
+        </div>
+
+        <!-- Corps du modal -->
+        <div class="modal-body">
+            <!-- Section Commande -->
+            <h3 class="section-title">Informations Commande</h3>
+            <hr class="line">
+            <div class="info-row">
+                <label>Numéro de commande :</label>
+                <p>CMD-2024-001</p>
+            </div>
+            <div class="info-row">
+                <label>Date de commande :</label>
+                <p>15 Jan 2024</p>
+            </div>
+            <div class="info-row">
+                <label>Statut :</label>
+                <p class="status-text pending">En attente</p>
+            </div>
+            <div class="info-row">
+                <label>Total :</label>
+                <p class="price-total">€1,199.00</p>
+            </div>
+
+            <!-- Section Client -->
+            <h3 class="section-title">Informations Client</h3>
+            <hr>
+            <div class="info-row">
+                <label>Nom :</label>
+                <p>Jean Dupont</p>
+            </div>
+            <div class="info-row">
+                <label>Email :</label>
+                <p>jean.dupont@gmail.com</p>
+            </div>
+            <div class="info-row">
+                <label>Téléphone :</label>
+                <p>+33 6 12 34 56 78</p>
+            </div>
+            <div class="info-row">
+                <label>Adresse :</label>
+                <p>123 Rue de la paix, 75001 Paris</p>
+            </div>
+
+            <!-- Section Produits -->
+            <h3 class="section-title">Articles Commandés</h3>
+            <hr>
+           <div class="product-details">
+  <div class="product-item">
+    <div class="pho"><i class="fa-solid fa-mobile-screen-button product-icon"></i></div>
+    <div class="product-info">
+      <div class="nam"><p class="product-name">iPhone 15 Pro 128GB </p>
+        <p>Blue</p>
+    </div>
+     <div class="quant"> <p class="product-qty">1</p></div>
+      <div class="product-price">€1,199.00</div>
+      <span class="total-price">€1,199.00</span>
+    </div>
+  </div>
+</div>
+
+          
+ </div>
+
+        <!-- Boutons -->
+        <div class="modal-buttons">
+            <button class="btn-secondary">Fermer</button>
+            <button class="btn-primary">Imprimer</button>
+        </div>
+    </div>
+</div>
+
+    <!-- Modal Voir détails pour la commande 2 -->
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2><i class="fa-solid fa-eye"></i> Détails de la Commande</h2>
+            <a href="#" class="close-btn">&times;</a>
+        </div>
+        <div class="modal-body">
+            <h3 class="section-title">Informations Commande</h3>
+            <hr>
+            <div class="info-row">
+                <label>Numéro de commande :</label>
+                <p>CMD-2024-002</p>
+            </div>
+            <div class="info-row">
+                <label>Date de commande :</label>
+                <p>14 Jan 2024</p>
+            </div>
+            <div class="info-row">
+                <label>Statut :</label>
+                <p class="status-text pending">En attente</p>
+            </div>
+            <div class="info-row">
+                <label>Total :</label>
+                <p class="price-total">€2,899.00</p>
+            </div>
+            
+            <h3 class="section-title">Informations Client</h3>
+            <hr>
+            <div class="info-row">
+                <label>Nom :</label>
+                <p>Marie Martin</p>
+            </div>
+            <div class="info-row">
+                <label>Email :</label>
+                <p>marie.martin@gmail.com</p>
+            </div>
+            <div class="info-row">
+                <label>Téléphone :</label>
+                <p>+33 6 23 45 67 89</p>
+            </div>
+            <div class="info-row">
+                <label>Adresse :</label>
+                <p>456 Avenue des Champs, 69002 Lyon</p>
+            </div>
+            
+            <h3 class="section-title">Articles Commandés</h3>
+            <hr>
+            <div class="product-details">
+                <div class="product-item">
+                    <i class="fa-solid fa-laptop"></i>
+                    <div class="product-info">
+                        <p class="product-name">MacBook Pro 16 M3 Pro - 512GB</p>
+                        <p class="product-qty">Quantité : 1</p>
+                    </div>
+                    <div class="product-price">€2,899.00</div>
+                </div>
+            </div>
+            
+            <div class="total-section">
+                <div class="total-row">
+                    <span>Total :</span>
+                    <span class="total-price">€2,899.00</span>
+                </div>
+            </div>
+        </div>
+        <div class="modal-buttons">
+            <button class="btn-secondary">Fermer</button>
+            <button class="btn-primary">Imprimer</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Modifier pour la commande 2 -->
+<div id="modifier2" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2><i class="fa-solid fa-pen"></i> Modifier la Commande</h2>
+            <a href="#" class="close-btn">&times;</a>
+        </div>
+        <div class="modal-body">
+            <h3 class="section-title">Informations Commande #CMD-2024-002</h3>
+            <hr>
+            <div class="form-group">
+                <label>Statut :</label>
+                <select class="form-select">
+                    <option>En attente</option>
+                    <option>En cours</option>
+                    <option>Expédiée</option>
+                    <option>Livrée</option>
+                    <option>Annulée</option>
+                </select>
+            </div>
+            
+            <h3 class="section-title">Informations Produit</h3>
+            <hr>
+            <div class="form-group">
+                <label>Quantité :</label>
+                <input type="number" class="form-input" value="1" min="1">
+            </div>
+            
+            <h3 class="section-title">Informations Client</h3>
+            <hr>
+            <div class="form-group">
+                <label>Nom :</label>
+                <input type="text" class="form-input" value="Marie Martin">
+            </div>
+            <div class="form-group">
+                <label>Email :</label>
+                <input type="email" class="form-input" value="marie.martin@gmail.com">
+            </div>
+            <div class="form-group">
+                <label>Téléphone :</label>
+                <input type="tel" class="form-input" value="+33 6 23 45 67 89">
+            </div>
+            <div class="form-group">
+                <label>Adresse de livraison :</label>
+                <input type="text" class="form-input" value="456 Avenue des Champs, 69002 Lyon">
+            </div>
+            
+            <h3 class="section-title">Notes internes</h3>
+            <hr>
+            <div class="form-group">
+                <textarea class="form-textarea">Client très satisfait du service</textarea>
+            </div>
+        </div>
+        <div class="modal-buttons">
+            <button class="btn-secondary">Annuler</button>
+            <button class="btn-primary">Sauvegarder</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Voir détails pour la commande 3 -->
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2><i class="fa-solid fa-eye"></i> Détails de la Commande</h2>
+            <a href="#" class="close-btn">&times;</a>
+        </div>
+        <div class="modal-body">
+            <h3 class="section-title">Informations Commande</h3>
+            <hr>
+            <div class="info-row">
+                <label>Numéro de commande :</label>
+                <p>CMD-2024-003</p>
+            </div>
+            <div class="info-row">
+                <label>Date de commande :</label>
+                <p>13 Jan 2024</p>
+            </div>
+            <div class="info-row">
+                <label>Statut :</label>
+                <p class="status-text pending">En attente</p>
+            </div>
+            <div class="info-row">
+                <label>Total :</label>
+                <p class="price-total">€558.00</p>
+            </div>
+            
+            <h3 class="section-title">Informations Client</h3>
+            <hr>
+            <div class="info-row">
+                <label>Nom :</label>
+                <p>Pierre Durand</p>
+            </div>
+            <div class="info-row">
+                <label>Email :</label>
+                <p>pierre.durand@gmail.com</p>
+            </div>
+            <div class="info-row">
+                <label>Téléphone :</label>
+                <p>+33 6 34 56 78 90</p>
+            </div>
+            <div class="info-row">
+                <label>Adresse :</label>
+                <p>789 Boulevard Maritime, 13008 Marseille</p>
+            </div>
+            
+            <h3 class="section-title">Articles Commandés</h3>
+            <hr>
+            <div class="product-details">
+                <div class="product-item">
+                    <i class="fa-solid fa-headphones"></i>
+                    <div class="product-info">
+                        <p class="product-name">AirPods Pro 2 USB-C</p>
+                        <p class="product-qty">Quantité : 2</p>
+                    </div>
+                    <div class="product-price">€279.00 *2</div>
+                </div>
+            </div>
+            
+            <div class="total-section">
+                <div class="total-row">
+                    <span>Sous-total :</span>
+                    <span>€558.00</span>
+                </div>
+                <div class="total-row">
+                    <span>Livraison :</span>
+                    <span>Gratuite</span>
+                </div>
+                <div class="total-row">
+                    <span>Total :</span>
+                    <span class="total-price">€558.00</span>
+                </div>
+            </div>
+        </div>
+        <div class="modal-buttons">
+            <button class="btn-secondary">Fermer</button>
+            <button class="btn-primary">Imprimer</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Modifier pour la commande 3 -->
+<div id="modifier3" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2><i class="fa-solid fa-pen"></i> Modifier la Commande</h2>
+            <a href="#" class="close-btn">&times;</a>
+        </div>
+        <div class="modal-body">
+            <h3 class="section-title">Informations Commande #CMD-2024-003</h3>
+            <hr>
+            <div class="form-group">
+                <label>Statut :</label>
+                <select class="form-select">
+                    <option>En attente</option>
+                    <option>En cours</option>
+                    <option>Expédiée</option>
+                    <option>Livrée</option>
+                    <option>Annulée</option>
+                </select>
+            </div>
+            
+            <h3 class="section-title">Informations Produit</h3>
+            <hr>
+            <div class="form-group">
+                <label>Quantité :</label>
+                <input type="number" class="form-input" value="2" min="1">
+            </div>
+            
+            <h3 class="section-title">Informations Client</h3>
+            <hr>
+            <div class="form-group">
+                <label>Nom :</label>
+                <input type="text" class="form-input" value="Pierre Durand">
+            </div>
+            <div class="form-group">
+                <label>Email :</label>
+                <input type="email" class="form-input" value="pierre.durand@gmail.com">
+            </div>
+            <div class="form-group">
+                <label>Téléphone :</label>
+                <input type="tel" class="form-input" value="+33 6 34 56 78 90">
+            </div>
+            <div class="form-group">
+                <label>Adresse de livraison :</label>
+                <input type="text" class="form-input" value="789 Boulevard Maritime, 13008 Marseille">
+            </div>
+            
+            <h3 class="section-title">Notes internes</h3>
+            <hr>
+            <div class="form-group">
+                <textarea class="form-textarea">Commande de deux paires d'écouteurs - Livraison express demandée</textarea>
+            </div>
+        </div>
+        <div class="modal-buttons">
+            <button class="btn-secondary">Annuler</button>
+            <button class="btn-primary">Sauvegarder</button>
+        </div>
+    </div>
+</div>
+     <!-- Modal Modifier pour la commande 1 -->
+    <div id="modifier1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fa-solid fa-pen"></i> Modifier la Commande</h2>
+                <a href="#" class="close-btn">&times;</a>
+            </div>
+            <div class="modal-body">
+                <h3 class="section-title">Statut de la commande</h3>
+                <hr>
+                <div class="form-group">
+                    <label>Statut :</label>
+                    <select class="form-select">
+                        <option>En attente</option>
+                        <option>En cours</option>
+                        <option>Expédiée</option>
+                        <option>Livrée</option>
+                        <option>Annulée</option>
+                    </select>
+                </div>
+                
+                <h3 class="section-title">Informations Client</h3>
+                <hr>
+                <div class="form-group">
+                    <label>Adresse de livraison :</label>
+                    <input type="text" class="form-input" value="123 Rue de la paix, 75001 Paris">
+                </div>
+                <div class="form-group">
+                    <label>Date de livraison prévue :</label>
+                    <input type="date" class="form-input" value="2024-01-20">
+                </div>
+                
+                <h3 class="section-title">Notes internes</h3>
+                <hr>
+                <div class="form-group">
+                    <textarea class="form-textarea">Notes internes pour l'équipe</textarea>
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button class="btn-secondary">Annuler</button>
+                <button class="btn-primary">Sauvegarder</button>
+            </div>
+        </div>
+    </div>
+  
+    <!-- Modal Profil -->
+    <div id="profil-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fa-solid fa-user"></i> Mon Profil</h2>
+                <a href="#" class="close-btn">&times;</a>
+            </div>
+            <div class="modal-body">
+                <div class="profile-picture">
+                    <i class="fa-solid fa-circle-user user-ico"></i>
+                    <button class="change-photo">Changer la photo</button>
+                </div>
+                
+                <div class="profile-info">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label>Nom :</label>
+                            <input type="text" class="form-input" placeholder="Administrateur">
+                        </div>
+                        <div class="info-item">
+                            <label>Prénom :</label>
+                            <input type="text" class="form-input" placeholder="Jean">
+                        </div>
+                        <div class="info-item">
+                            <label>Email :</label>
+                            <input type="email" class="form-input" placeholder="admin@dashboard.com">
+                        </div>
+                        <div class="info-item">
+                            <label>Téléphone :</label>
+                            <input type="text" class="form-input" placeholder="+33 6 12 34 56 78">
+                        </div>
+                    </div>
+                    
+                    <div class="info-full">
+                        <div class="form-group">
+                            <label>Rôle :</label>
+                            <input type="text" class="form-input" placeholder="Gestionnaire">
+                        </div>
+                        <div class="form-group">
+                            <label>Dernière connexion :</label>
+                            <input type="text" class="form-input" placeholder="15 Janvier 2024 à 14:30">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button class="btn-secondary">Fermer</button>
+                <button class="btn-primary">Sauvegarder</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

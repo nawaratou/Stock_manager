@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapports - StockManager</title>
+    <link rel="stylesheet" href="Rapports.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+</head>
+<body>
+    <input type="checkbox" id="sidebar-toggle">
+    <label for="sidebar-toggle" class="sidebar-overlay"></label>
+    
+    <div class="container">
+        <div class="sidebar">
+            <label for="sidebar-toggle" class="close-sidebar">
+                <i class="fa-solid fa-times"></i>
+            </label>
+            
+            <h2><i class="fa-solid fa-chart-line"></i> Dashboard</h2>
+            <ul class="menu">
+                <li><a href="dashboard.html" class="menu-link"><i class="fa-solid fa-palette"></i> Tableau de Bord</a></li>
+                <li><a href="Analytics.html" class="menu-link"><i class="fa-solid fa-chart-column"></i> Analytics</a></li>
+                <li><a href="commandes.html" class="menu-link"><i class="fa-solid fa-cart-shopping"></i> Commandes</a></li>
+                <li><a href="parametres.html" class="menu-link"><i class="fa-solid fa-gear"></i> Paramètres</a></li>
+                <li class="active"><a href="rapports.html" class="menu-link"><i class="fa-solid fa-file-lines"></i> Rapports</a></li>
+                <li><a href="notifications.html" class="menu-link"><i class="fa-solid fa-bell"></i> Notifications</a></li>
+            </ul>
+            <div class="bottom-section">
+                <div class="user-box">
+                    <i class="fa-solid fa-circle-user user-icon"></i>
+                    <div>
+                        <strong>Administrateur</strong>
+                        <span>Gestionnaire</span>
+                    </div>
+                </div>
+                <a href="#profil-modal"><button class="profile-btn"><i class="fa-solid fa-user"></i> Mon Profil</button></a>
+                <a href="index.html"><button class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</button></a>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <nav class="topbar">
+                <label for="sidebar-toggle" class="menu-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <h5>Gestion de Stock - Produits Électroniques</h5>
+                 <div class="cloch">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="trois">3</span>
+                </div>
+                <div class="topbar_left">
+                    <span><i class="fa-solid fa-circle-user user-icon"></i></span>
+                    <strong class="admi">Administrateur</strong>
+                </div>
+            </nav>
+            
+            <div class="content">
+                <h2>Rapports & Analytics</h2>
+                <p>Générez et consultez vos rapports d'activité</p>
+                
+                <!-- Section de configuration -->
+                <div class="bande">
+                    <div class="config">
+                        <div class="config-item">
+                            <label for="report-type">Type de rapport</label>
+                            <select id="report-type">
+                                <option>Ventes</option>
+                                <option>Stock</option>
+                                <option>Financier</option>
+                                <option>Clients</option>
+                            </select>
+                        </div>
+                        <div class="config-item">
+                            <label for="period">Période</label>
+                            <select id="period">
+                                <option>Janvier 2024</option>
+                                <option>Décembre 2023</option>
+                                <option>Novembre 2023</option>
+                                <option>Trimestre 4 2023</option>
+                            </select>
+                        </div>
+                        <div class="config-item">
+                            <label for="format">Format</label>
+                            <select id="format">
+                                <option>PDF</option>
+                                <option>Excel</option>
+                                <option>CSV</option>
+                            </select>
+                        </div>
+                        <button class="generate-btn">
+                        <i class="fas fa-file-export"></i> Générer le rapport
+                    </button>
+                    </div>
+                    
+                </div>
+                
+                <!-- Cartes de statistiques -->
+                <div class="stats-cards">
+                    <div class="stat-card sales">
+                        <div class="stat-header">
+                            <div class="stat-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="stat-title">Rapports de Ventes</div>
+                        </div>
+                        <div class="stat-values">
+                            <div class="stat-block">
+                                <div class="stat-value blue">€45,678</div>
+                                <div class="stat-sub">Chiffre d'affaires</div>
+                            </div>
+                            <div class="stat_block">
+                                <div class="stat-value">+12.5%</div>
+                                <div class="stat-sub">vs mois dernier</div>
+                            </div>
+                        </div>
+                        <button class="detail-btn">Voir détails</button>
+                    </div>
+                    
+                    <div class="stat-card stock">
+                        <div class="stat-header">
+                            <div class="stat-icon">
+                                <i class="fas fa-boxes"></i>
+                            </div>
+                            <div class="stat-title">État du Stock</div>
+                        </div>
+                        <div class="stat-values">
+                            <div class="stat-block">
+                                <div class="stat-value blue">1,234</div>
+                                <div class="stat-sub">Articles en stock</div>
+                            </div>
+                            <div class="stat_block">
+                                <div class="stat-value">23</div>
+                                <div class="stat-sub">Stock faible</div>
+                            </div>
+                        </div>
+                        <button class="detail-btn">Voir Détails</button>
+                    </div>
+                    
+                    <div class="stat-card customers">
+                        <div class="stat-header">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-title">Clients</div>
+                        </div>
+                        <div class="stat-values">
+                            <div class="stat-block">
+                                <div class="stat-value blue">856</div>
+                                <div class="stat-sub">Nouveaux Clients</div>
+                            </div>
+                            <div class="stat_block">
+                                <div class="stat-value">2,345</div>
+                                <div class="stat-sub">Total clients</div>
+                            </div>
+                        </div>
+                        <button class="detail-btn">Voir détails</button>
+                    </div>
+                </div>
+                
+                <div class="rapport-container">
+                    <!-- Bande grise du haut -->
+                    <section class="top-products">
+                        <div class="header-top">
+                            <h3><i class="fas fa-history"></i> Historique des Rapports</h3>
+                        </div>
+                    </section>
+                    <div class="table-responsive">
+<table class="products-table">
+    <thead>
+        <tr>
+            <th>Nom du rapport</th>
+            <th>Type</th>
+            <th>Date de Génération</th>
+            <th>Statut</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td data-label="Nom du rapport">
+                
+                <div class="sup">
+                 <i class="fas fa-file-pdf"></i> 
+                    <span>Rapport_ventes_janvier_2024.pdf</span>
+                </div>
+            </td>
+            <td data-label="Type">
+                <div class="sup">Ventes</div>
+
+            </td>
+            <td data-label="Date de génération">
+                <div class="sup">15 Jan 2024</div>
+
+            </td>
+            <td data-label="Statut">
+                <span class="statut termine">Terminé</span>
+            </td>
+            <td data-label="Actions" class="action-icons">
+                <div class="act">
+                     <i class="fas fa-trash"></i>
+                <i class="fas fa-download"></i>
+                </div>
+               
+            </td>
+        </tr>
+
+        <tr>
+            <td data-label="Nom du rapport">
+                <div class="sup"> 
+                    <i class="fas fa-file-excel"></i> 
+               <span> Stock_inventaire_janvier_2024.xlsx</span>
+            </div>
+               
+            </td>
+            <td data-label="Type">Stock</td>
+            <td data-label="Date de génération">14 Jan 2024</td>
+            <td data-label="Statut">
+                <span class="statut termine">Terminé</span>
+            </td>
+            <td data-label="Actions" class="action-icons">
+                <div class="act">
+                 <i class="fas fa-trash"></i>
+                <i class="fas fa-download"></i>
+                </div>
+               
+            </td>
+        </tr>
+
+        <tr>
+            <td data-label="Nom du rapport">
+                <div class="sup">
+                      <i class="fa-solid fa-spinner"></i>
+               <span> Rapport_financier_trimestre.xlsx</span>
+                </div>
+              
+            </td>
+            <td data-label="Type">Financier</td>
+            <td data-label="Date de génération">10 Jan 2024</td>
+            <td data-label="Statut">
+                <span class="statut encours">En cours</span>
+            </td>
+            <td data-label="Actions" class="action-icons">
+                <i class="fas fa-trash"></i>
+            </td>
+        </tr>
+    </tbody>
+</table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Profil -->
+    <div id="profil-modal" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close-btn">&times;</a>
+
+            <div class="header">
+                <h2><i class="fa-solid fa-user"></i> Mon Profil</h2>
+            </div>
+
+            <div class="logo">
+                <i class="fa-solid fa-circle-user user-ico"></i>
+                <button class="change-photo">Changer la photo</button>
+            </div>
+
+            <div class="profile-info">
+                <div class="info-grid">
+                    <div class="info-item">
+                        <p>Nom :</p>
+                        <input type="text" placeholder="Administrateur">
+                    </div>
+                    <div class="info-item">
+                        <p>Prénom :</p>
+                        <input type="text" placeholder="Jean">
+                    </div>
+                    <div class="info-item">
+                        <p>Email :</p>
+                        <input type="email" placeholder="admin@dashboard.com">
+                    </div>
+                    <div class="info-item">
+                        <p>Téléphone :</p>
+                        <input type="text" placeholder="+33 6 12 34 56 78">
+                    </div>
+                </div>
+
+                <div class="info-full">
+                    <p>Rôle :</p>
+                    <input type="text" placeholder="Gestionnaire">
+                    <p>Dernière connexion :</p>
+                    <input type="text" placeholder="15 Janvier 2024 à 14:30">
+                </div>
+            </div>
+
+            <div class="profile-actions">
+                <button class="close-btn2">Fermer</button>
+                <button class="save-btn">Sauvegarder</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

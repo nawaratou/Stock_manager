@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+    <link rel="stylesheet" href="notifications.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+</head>
+<body>
+    <input type="checkbox" id="sidebar-toggle">
+    <label for="sidebar-toggle" class="sidebar-overlay"></label>
+    
+    <div class="container">
+        <div class="sidebar">
+            <label for="sidebar-toggle" class="close-sidebar">
+                <i class="fa-solid fa-times"></i>
+            </label>
+            
+            <h2><i class="fa-solid fa-chart-line"></i> Dashboard</h2>
+            <ul class="menu">
+                <li><a href="dashboard.html" class="menu-link"><i class="fa-solid fa-palette"></i> Tableau de Bord</a></li>
+                <li><a href="Analytics.html" class="menu-link"><i class="fa-solid fa-chart-column"></i> Analytics</a></li>
+                <li><a href="commandes.html" class="menu-link"><i class="fa-solid fa-cart-shopping"></i> Commandes</a></li>
+                <li><a href="parametres.html" class="menu-link"><i class="fa-solid fa-gear"></i> Paramètres</a></li>
+                <li><a href="rapports.html" class="menu-link"><i class="fa-solid fa-file-lines"></i> Rapports</a></li>
+                <li class="active"><a href="notifications.html" class="menu-link"><i class="fa-solid fa-bell"></i> Notifications</a></li>
+            </ul>
+            <div class="bottom-section">
+                <div class="user-box">
+                    <i class="fa-solid fa-circle-user user-icon"></i>
+                    <div>
+                        <strong>Administrateur</strong>
+                        <span>Gestionnaire</span>
+                    </div>
+                </div>
+                <a href="#profil-modal"><button class="profile-btn"><i class="fa-solid fa-user"></i> Mon Profil</button></a>
+                <a href="index.html"><button class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</button></a>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <nav class="topbar">
+                <label for="sidebar-toggle" class="menu-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <h5>Gestion de Stock - Produits Électroniques</h5>
+                 <div class="cloch">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="trois">3</span>
+                </div>
+                <div class="topbar_left">
+                    <span><i class="fa-solid fa-circle-user user-icon"></i></span>
+                    <strong class="admi">Administrateur</strong>
+                </div>
+            </nav>
+            
+            <section class="content">
+                <div class="header">
+                    <div class="icone"> <i class="fa-solid fa-bell"></i></div>
+                    <div class="text">
+                        <h2>Notifications & Alertes</h2>
+                        <p>Centre de notifications et gestions des alertes système</p>
+                    </div>
+                </div>
+                
+                <div class="Gestion"> 
+                    <div class="Produits">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div class="Produits-content">
+                            <h2>12</h2>
+                            <p>Non lues</p>
+                        </div>
+                    </div>
+                    <div class="Produits">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <div class="Produits-content">
+                            <h2>3</h2>
+                            <p>Urgentes</p>
+                        </div>
+                    </div>
+                    <div class="Produits">
+                        <i class="fa-solid fa-calendar"></i>
+                        <div class="Produits-content">
+                            <h2>23</h2>
+                            <p>Aujourd'hui</p>
+                        </div>
+                    </div>
+                    <div class="Produits">
+                        <i class="fa-solid fa-bars"></i>
+                        <div class="Produits-content">
+                            <h2>156</h2>
+                            <p>Total</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="statut">
+                <div class="stat">
+                    <p>Type:</p>
+                    <p>Priorité:</p>
+                    <p>Statut:</p>
+                </div>
+                <div class="put">
+                    <select name="type" required> 
+                        <option value="">Tous les types</option>
+                        <option value="">Stock</option>
+                        <option value="">Commandes</option>
+                        <option value="">Système</option>
+                    </select>
+                    <select name="priorite" required>
+                        <option value="">Toutes</option>
+                        <option value="">Urgent</option>
+                        <option value="">Normal</option>
+                        <option value="">Faible</option>
+                    </select>
+                    <select name="statut" required> 
+                        <option value="">Tous</option>
+                        <option value="">Non lues</option>
+                        <option value="">Lues</option>
+                    </select>
+                    <button class="glass">
+                         <p>Filtrer</p>
+                        <i class="fa-solid fa-filter"></i> 
+                       
+                    </button>
+                </div>
+            </section>
+            
+            <div class="notifications">
+                <div class="notification critical">
+                    <div class="icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                    <div class="content">
+                        <h3>Stock critique détecté</h3>
+                        <p>Le produit <strong>"AirPods Pro 2"</strong> a atteint le seuil critique de stock (3 unités restantes). Veuillez passer commande rapidement.</p>
+                        <div class="actions">
+                            <button class="btn-primary1">Passer commande</button>
+                            <button class="btn-secondary">Marquer comme lu</button>
+                        </div>
+                    </div>
+                    <span class="time">Il y a 5 minutes</span>
+                </div>
+
+                <div class="notification new-order">
+                    <div class="icon"><i class="fa-solid fa-circle-info"></i></div>
+                    <div class="content">
+                        <h3>Nouvelle commande reçue</h3>
+                        <p>Commande <strong>#CMD-2024-004</strong> reçue de <strong>Marie Dubois</strong> pour un <strong>MacBook Pro 16"</strong> (€2,899.00)</p>
+                        <div class="actions">
+                            <button class="btn-primary2">Voir la commande</button>
+                            <button class="btn-secondary">Marquer comme lu</button>
+                        </div>
+                    </div>
+                    <span class="time">Il y a 15 minutes</span>
+                </div>
+
+                <div class="notification shipped">
+                    <div class="icon"><i class="fa-solid fa-circle-check"></i></div>
+                    <div class="content">
+                        <h3>Commande expédiée</h3>
+                        <p>La commande <strong>#CMD-2024-003</strong> a été expédiée avec succès. Numéro de suivi : <strong>FR123456789</strong></p>
+                        <div class="actions">
+                            <button class="btn-primary3">Suivre l'envoi</button>
+                        </div>
+                    </div>
+                    <span class="time">Il y a 1 heure</span>
+                </div>
+                
+                <div class="notification shippe">
+                    <div class="icon"><i class="fa-solid fa-gear"></i></div>
+                    <div class="content">
+                        <h3>Sauvegarde automatique terminée</h3>
+                        <p>Sauvegarde quotidienne des données terminée avec succès. 2.3 GB de données sauvegardées</p>
+                        <div class="actions">
+                            <button class="btn-primary1">Voir Détails</button>
+                        </div>
+                    </div>
+                    <span class="time">Il y a 2 heures</span>
+                </div>
+                 <div class="notification critica">
+                    <div class="icon"><i class="fa-solid fa-shield"></i></div>
+                    <div class="content">
+                        <h3>Connexion depuis un nouvel appareil</h3>
+                        <p>Connexion détectée depuis un nouvel appareil (iPhone, Paris, France). Si ce n'est pas vous,changez votre mot de passe.</p>
+                        <div class="actions">
+                            <button class="btn-primary1">Sécuriser le compte</button>
+                        </div>
+                    </div>
+                    <span class="time">Il y a 3heures</span>
+                </div>
+                <div class="bottom">
+  <div class="appe">
+    <input type="checkbox" name="selecteur" id="">
+    <p>Sélectionner tout</p>
+  </div>
+
+  <div class="buttons-group">
+    <button>Marquer comme lu</button>
+    <button>
+      <i class="fa-solid fa-trash"></i>
+      <p>Supprimer</p>
+    </button>
+  </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Profil -->
+    <div id="profil-modal" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close-btn">&times;</a>
+            <div class="header">
+                <h2><i class="fa-solid fa-user"></i> Mon Profil</h2>
+            </div>
+            <div class="logo">
+                <i class="fa-solid fa-circle-user user-ico"></i>
+                <button class="change-photo">Changer la photo</button>
+            </div>
+            <div class="profile-info">
+                <div class="info-grid">
+                    <div class="info-item">
+                        <p>Nom :</p>
+                        <input type="text" placeholder="Administrateur">
+                    </div>
+                    <div class="info-item">
+                        <p>Prénom :</p>
+                        <input type="text" placeholder="Jean">
+                    </div>
+                    <div class="info-item">
+                        <p>Email :</p>
+                        <input type="email" placeholder="admin@dashboard.com">
+                    </div>
+                    <div class="info-item">
+                        <p>Téléphone :</p>
+                        <input type="text" placeholder="+33 6 12 34 56 78">
+                    </div>
+                </div>
+                <div class="info-full">
+                    <p>Rôle :</p>
+                    <input type="text" placeholder="Gestionnaire">
+                    <p>Dernière connexion :</p>
+                    <input type="text" placeholder="15 Janvier 2024 à 14:30">
+                </div>
+            </div>
+            <div class="profile-actions">
+                <button class="close-btn2">Fermer</button>
+                <button class="save-btn">Sauvegarder</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
