@@ -136,7 +136,6 @@ body {
     font-size: 22px;
 }
 
-/* Correction pour les boutons dans les liens */
 .bottom-section a {
     text-decoration: none;
     display: block;
@@ -546,7 +545,7 @@ body {
         .info-row {
             display: flex;
             justify-content: space-between;
-            padding: 12px 25px;
+            padding: 15px 25px;
             border-bottom: 1px solid #f1f5f9;
         }
 

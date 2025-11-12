@@ -450,12 +450,17 @@ transform: translateY(-8px);
 .header{
     display: flex;
 }
-.icone{
-    font-size: 26px;
+.new-order .icon{
     color: #232b45;
-    gap: 2rem;
+   font-size: 12px;
 }
 
+.icone{
+    font-size: 24px;
+    gap: 4rem;
+   color: #232b45; 
+
+}
 .notification:nth-child(5) i {
     background-color: #f9c05e;
    border-radius: 50%;
@@ -492,6 +497,7 @@ transform: translateY(-8px);
     width: 2rem;
     height: 35px;
     display: flex;
+    font-size: 25px;
     justify-content: center;
     align-items: center;
 }
