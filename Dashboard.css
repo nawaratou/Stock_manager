@@ -17,6 +17,16 @@ body {
     display: flex;
     height: 100vh;
 }
+.dash{
+    display: flex;
+    flex-direction: column;
+    gap: rem;
+}
+.dash hr{
+    width: 100%;
+    position: relative;
+    top: -1rem;
+}
 
 .sidebar {
     width: 270px;
